@@ -4,9 +4,9 @@
 <head>
 <meta charset="utf-8">
 
-<title>Modular frontend with NPM and pals</title>
+<title>Unidirectional JavaScript</title>
 
-<meta name="description" content="writing modular javascript">
+<meta name="description" content="writing unidirectional apps">
 <meta name="author" content="Jake Verbaten">
 
 <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -79,7 +79,7 @@ document.write( '<link rel="stylesheet" href="css/print/' + ( window.location.se
   <!-- Any section element inside of this container is displayed as a slide -->
   <div class="slides">
     <section class="slide-1">
-      <h2>Modular frontend with NPM & pals</h2>
+      <h2>Unidirectional JavaScript apps</h2>
 
       <h3><a href="http://twitter.com/raynos">@Raynos</a></h3>
     </section>
@@ -88,14 +88,30 @@ document.write( '<link rel="stylesheet" href="css/print/' + ( window.location.se
       <h2>Overview</h2>
 
       <ul>
-        <li>How to use modules in your app</li>
-        <li>Authoring small modules is great for collaboration</li>
-        <li>You can author self-contained UI widgets as modules</li>
-        <li>How to build your own custom flexible "framework" from modules</li>
+        <li>What is an unidirectional app</li>
+        <li>Why is it a good idea</li>
+        <li>How does it compare to MV* and FRP</li>
+        <li>Building a unidirectional app</li>
       </ul>
     </section>
 
     <section>
+    <section class="slide-2">
+      <h3>A unidirectional app</h3>
+
+      <p>
+        Unidirectional: A term coined by react engineers to
+        describe the data flow of an application
+      </p>
+    </section>
+    <section>
+      <h3>How it works</h3>
+
+      <img src="http://i.imgur.com/zg6kpY0.png" style="background-color: white"></img>
+    </section>
+    </section>
+
+    <!-- <section>
     <section class="slide-2">
       <h3>Tools of the trade</h3>
 
@@ -284,29 +300,9 @@ document.write( '<link rel="stylesheet" href="css/print/' + ( window.location.se
       <h3><a href="http://twitter.com/raynos">@Raynos</a></h3>
     </section>
 
-    <!-- Talk (npm):
+    <!-- Talk (unidirectional):
 
-This talk is about a modular frontend which is an approach not common to most frontend developers. No jQuery, no frameworks. Instead many small, simple abstractions are used, published to npm and bundled with browserify.
-
-The NPM-style frontend prefers modularity and simple abstractions that do one thing well. THis talk includes:
-
- - Various approaches to creating standalone “components” or “widgets” that are published to npm, including styles & templates.
- - How to compose various modules together to build your own “framework” with your own trade offs.
- - How to compose an application from smaller applications
- - Build small UI components with thin interfaces that you glue together in your application.
- - Your entry point is small, containing the minimal glue code and each UI component addresses its own concerns.
-
-The four stories:
-
- - Writing a small module, like `xhr` other people can build
-    cool stuff on top of it. (httpify & xhr-json)
- - You can use small modules instead of frameworks today,
-    like all these modules in npm-dom.
- - You can build your own unidirectional framework, using
-    small modules.
- - You can build your own standalone component and publish it
-    to npm.
-
+    About Jake Verbaten's talk: Building a unidirectional web app means having your data flow in one direction. We will talk about the concepts and their origins from React & Elm, compare the unidirectional approach to FRP & MVC and then take a look at building one using small modules.
 
 -->
 
