@@ -79,7 +79,7 @@ document.write( '<link rel="stylesheet" href="css/print/' + ( window.location.se
   <!-- Any section element inside of this container is displayed as a slide -->
   <div class="slides">
     <section class="slide-1">
-      <h2>Unidirectional JavaScript apps with</h2>
+      <h2>Unidirectional JavaScript apps</h2>
       <h3>With mercury</h3>
 
       <h3><a href="http://twitter.com/raynos">@Raynos</a></h3>
@@ -89,7 +89,7 @@ document.write( '<link rel="stylesheet" href="css/print/' + ( window.location.se
       <h2>Overview</h2>
 
       <ul>
-        <li>What is an unidirectional app</li>
+        <li>What is a unidirectional app</li>
         <li>How does it compare to MV* and FRP</li>
         <li>Building a unidirectional app with mercury</li>
       </ul>
@@ -132,7 +132,7 @@ document.write( '<link rel="stylesheet" href="css/print/' + ( window.location.se
       <h3>A immutable unidirectional app</h3>
 
       <ul>
-        <li>No two data binding</li>
+        <li>No two way data binding</li>
         <li>No two way references between concerns</li>
         <li>No mutable references between concerns</li>
       </ul>
@@ -168,11 +168,14 @@ document.write( '<link rel="stylesheet" href="css/print/' + ( window.location.se
       <h2>Demo time!</h2>
     </section>
 
+    <section>
     <section class="slide-12">
       <h2>Q&A time!</h2>
 
-      <h2>Don't be shy, ask my anything!</h2>
+      <h3>Don't be shy</h3>
+      <h3>ask me anything!</h3>
     </section>
+
     <section class="slide-13">
       <h2>Q&A topics</h2>
 
@@ -183,6 +186,7 @@ document.write( '<link rel="stylesheet" href="css/print/' + ( window.location.se
         <li>How does this compare to React/Flux/MVC/X</li>
       </ul>
     </section>
+    </section>
 
     <section class="slide-14">
       <h2>Thanks.</h2>
@@ -192,195 +196,6 @@ document.write( '<link rel="stylesheet" href="css/print/' + ( window.location.se
       <br>
       <h3>Oh, and we're hiring:</h3>
       <h3>jakev@uber.com</h3>
-    </section>
-
-    <!-- <section>
-    <section class="slide-2">
-      <h3>Tools of the trade</h3>
-
-      <ul>
-        <li>npm</li>
-        <li>browserify</li>
-        <li>unix</li>
-      </ul>
-    </section>
-
-    <section class="slide-3">
-      <h3>npm</h3>
-
-      <br>
-      <p>
-      npm is a package manager for JavaScript. It allows for
-      easily authoring small modules without dependency hell
-      </p>
-    </section>
-
-    <section class="slide-4">
-      <h3>browserify</h3>
-
-      <ul>
-        <li>commonJS for browsers</li>
-        <li>supports node_modules</li>
-        <li>creates a single JS file</li>
-      </ul>
-
-      <br/><br/>
-      <a href='https://github.com/substack/browserify-handbook'>Check out browserify handbook</a>
-    </section>
-
-    <section class="slide-5">
-      <h3>unix</h3>
-
-      <br>
-      <blockquote>
-        <p>Developers should build a program out of simple parts connected by well defined interfaces, so problems are local, and parts of the program can be replaced in future versions to support new features. This rule aims to save time on debugging code that is complex, long, and unreadable.</p>
-      </blockquote> 
-      
-    </section>
-    </section>
-
-    <section>
-    <section class="slide-6">
-      <h3>Using modules</h3>
-
-      <p>The why?</p>
-
-      <br>
-      <ul>
-        <li>Pick the best of everything</li>
-        <li>Use exactly what you need, no more</li>
-        <li>No lock in, freedom to switch whenever</li>
-      </ul>
-    </section>
-
-    <section class="slide-7">
-      <h3>Using modules</h3>
-
-      <p>The where?</p>
-
-      <br>
-      <ul>
-        <li><a href='https://github.com/npm-dom'>npm-dom</a></li>
-        <li><a href='http://modules.gl/'>gl-modules</a></li>
-        <li><a href='http://voxeljs.com/'>voxelJS</a></li>
-        <li><a href='https://www.npmjs.org/search?q=level-'>levelDB</a></li>
-        <li><a href='https://github.com/substack/stream-handbook'>streams handbook</a></li>
-      </ul>
-    </section>
-
-    <section class="slide-8">
-      <h3>Demo time</h3>
-
-      <p>Building a little app with modules</p>
-      <a href='https://github.com/Raynos/jsconf2014-talk/blob/gh-pages/demos/spinner.js'>A small spinner app</a>
-    </section>
-    </section>
-    
-    <section>
-    <section class="slide-9">
-      <h3>Modules & Collaboration</h3>
-
-      <br>
-      <p>People can re-use & expand on the small modules you build</p>
-    </section>
-
-    <section class="slide-10">
-      <h3>xhr</h3>
-
-      <br>
-      <p>A module that does one thing, sends http requests</p>
-    </section>
-
-    <section class="slide-11">
-      <h3>And its dependents</h3>
-
-      <br>
-      <ul>
-        <li><a href='https://github.com/scottcorgan/httpify'>httpify</a></li>
-        <li><a href='https://github.com/nathan7/xhr-json'>xhr-json</a></li>
-        <li><a href='https://www.npmjs.org/package/flatsheet'>flatsheet</a></li>
-      </ul>
-    </section>
-    </section>
-
-    <section class="slide-12">
-      <h3>Building a modular "framework"</h3>
-
-      <br>
-      <ul>
-        <li>Decompose the problem space</li>
-        <li>Work from the ground up</li>
-        <li>Solve each problem well in isolation</li>
-      </ul>
-    </section>
-
-    <section>
-    <section class="slide-13">
-      <h3>A unidirectional approach</h3>
-
-      <br>
-      <p>Observable & Immutable state</p>
-      <ul>
-        <li><a href='https://github.com/Raynos/observ'>observ</a></li>
-        <li><a href='https://github.com/Raynos/observ-hash'>observ-hash</a></li>
-        <li><a href='https://github.com/Raynos/observ-array'>observ-array</a></li>
-      </ul>
-    </section>
-
-    <section class="slide-14">
-      <h3>A unidirectional approach</h3>
-
-      <br>
-      <p>Representing input</p>
-      <ul>
-        <li><a href='https://github.com/Raynos/geval'>geval</a></li>
-        <li><a href='https://github.com/Raynos/value-event'>value-event</a></li>
-        <li><a href='https://github.com/Raynos/dom-delegator'>dom-delegator</a></li>
-      </ul>
-    </section>
-
-    <section class="slide-15">
-      <h3>A unidirectional approach</h3>
-
-      <br>
-      <p>Rendering the view</p>
-      <ul>
-        <li><a href='https://github.com/Matt-Esch/vtree'>vtree</a></li>
-        <li><a href='https://github.com/Matt-Esch/vdom'>vdom</a></li>
-        <li><a href='https://github.com/Raynos/virtual-hyperscript'>virtual-hyperscript</a></li>
-      </ul>
-    </section>
-    </section>
-
-    <section class="slide-16">
-      <h3>Demo time</h3>
-
-      <p>Publishing UI components as modules</p>
-      <a href='https://github.com/Raynos/jsconf2014-talk/blob/gh-pages/demos/github-widget.js'>Using a github widget module</a>
-    </section>
-
-    <section class="slide-17">
-      <h3>Demo time</h3>
-
-      <p>Building your own unidirectional app with modules</p>
-      <a href='https://github.com/Raynos/jsconf2014-talk/blob/gh-pages/demos/todo-list.js'>A unidirectional demo</a>
-    </section>
-
-    <section class="slide-18">
-      <h2>Overview</h2>
-
-      <ul>
-        <li>How to use modules in your app</li>
-        <li>Authoring small modules is great for collaboration</li>
-        <li>You can author self-contained UI widgets as modules</li>
-        <li>How to build your own custom flexible "framework" from modules</li>
-      </ul>
-    </section>
-
-    <section class="slide-19">
-      <h1>Thanks.</h1>
-
-      <h3><a href="http://twitter.com/raynos">@Raynos</a></h3>
     </section>
 
     <!-- Talk (unidirectional):

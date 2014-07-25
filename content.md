@@ -58,6 +58,40 @@ cycle never ends.
 
 ## Slide 4
 
+This technique also supports modular components. You can nest
+components or tiny applications in larger applications.
+
+Here we have a nested another child component, that has it's own Input,
+Update logic and State in a parent component.
+
+The way nested components work is that you embed their state
+in the parent state. Then when it comes to render your application
+you will have to call the render implementation of the child
+component with the child state.
+
+This achieves the goal of seperation that you would want with
+nesting components. The parent component knows nothing about
+the Input events the child listens to, or the State the child
+has or what the update logic is.
+
+## Slide 5
+
+Generally when building a web application there are certain
+responsibilities you have to deal with.
+
+You need to setup all your objects and functions, this is 
+generally done in each component as shown in the nested diagram.
+
+Someone has to convert raw input into user intent, this kind
+of logic lives in the Input part of the application.
+
+Obvouisly updating application state is part of the Update logic
+and the State itself notifies the UI of changes.
+
+We use the virtual DOM and Render to render the UI to a new state
+
+## Slide 6
+
 So a unidirectional app is pretty simple, but that's not what
 I wanted to talk about.
 
@@ -80,7 +114,7 @@ part of the truth.
 
 This is where mercury and flux deviate.
 
-## Slide 5
+## Slide 7
 
 Let's go back to this diagram and talk more about it. The first
 thing I want to point out is that these arrows are dotted, with
@@ -114,3 +148,20 @@ in which we write to the DOM, this is the source of truth and
 source of ownership for DOM mutation, since the virtual DOM tree
 itself is also an immutable data structure there is no mutable
 shared state here.
+
+## Slide 8
+
+I read the wikipedia definition of MVC and this is what wikipedia
+thinks MVC is.
+
+The biggest difference is this Controller<->View coupling that
+you will find in MVC apps.
+
+The other difference is that all these references are mutable.
+i.e. the View can mutate the Model.
+
+## Slide 9
+
+So clearly wikipedia is wrong about what MVC is.
+
+This is a diagram
