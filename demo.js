@@ -35,12 +35,12 @@ function createState(events) {
 
     function incCounter(ev) {
         var counter = state.counters.get(ev.id);
-        counter.number.set(counter.number() - 1);
+        counter.number.set(counter.number() + 1);
     }
 
     function decCounter(ev) {
         var counter = state.counters.get(ev.id);
-        counter.number.set(counter.number() + 1);
+        counter.number.set(counter.number() - 1);
     }
 }
 
